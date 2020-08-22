@@ -1,2 +1,141 @@
+darkGrayishBlue = #48556a
+darkBlue = #6d7f97
+grayishBlue = #8a939c
+lightGrayishBlue = #d9e6f2
+
+*
+	margin 0
+	padding 0
+
 body
 	background-color #edf2f8
+	box-sizing border-box
+	font-family 'Manrope', sans-serif;
+	font-size 13px
+
+main
+	align-items center
+	display flex
+	flex-direction column
+	height 100vh
+	justify-content center
+	width 100vw
+
+.card
+	position absolute
+	background-color #FFF
+	border-radius 10px
+	box-shadow 0px 0px 23px 2px lightGrayishBlue
+	width 90vw
+	.card-image
+		background url('../images/drawers.jpg') center no-repeat
+		background-size cover
+		border-top-left-radius 10px
+		border-top-right-radius 10px
+		width 100%
+		height 200px
+	.card-content
+		display flex
+		flex-direction column
+		align-items center
+		.card-title
+			// border 1px solid red
+			color darkGrayishBlue
+			font-size 15px
+			font-weight 700
+			letter-spacing 0.4px
+			line-height 20px
+			margin-top 40px
+			width 260px
+		.card-text
+			// border 1px solid blue
+			color grayishBlue
+			font-weight 200
+			letter-spacing 0.4px
+			line-height 20px
+			margin-top 20px
+			width 260px
+	.card-footer
+		display grid
+		grid-template-columns 1fr 178px 1fr
+		margin 0 auto
+		margin-top 30px
+		padding-bottom 20px
+		width 260px
+		.card-footer-image
+			width 40px
+			img
+				border-radius 50%
+				width inherit
+		.card-footer-info
+			letter-spacing 0.4px
+			p
+				color grayishBlue
+				font-weight 200
+				padding-left 20px
+			p:first-child
+				color darkGrayishBlue
+				font-weight 700
+				padding-bottom 8px
+
+.card-footer-share
+	padding-top 8px
+	cursor pointer
+	.card-footer-share--ligth
+		background-color #edf2f8
+		border-radius 50%
+		color darkGrayishBlue
+		height 28px
+		line-height 30px
+		margin 0 auto
+		text-align center
+		width 28px
+	.card-footer-share--dark
+		background-color darkBlue
+		border-radius 50%
+		color #edf2f8
+		height 28px
+		line-height 30px
+		margin 0 auto
+		margin-top 8px
+		text-align center
+		width 28px
+
+.content-footer
+	background-color darkGrayishBlue
+	border-bottom-left-radius 10px
+	border-bottom-right-radius 10px
+	color #FFF
+	display none
+	grid-template-columns 2fr 1fr
+	height 70px
+	width 90vw
+	position relative
+	bottom -221px
+	// transform: translateY(-70px);
+	animation 0.5s blink ease
+	&&.active
+		display grid
+	.social-media
+		text-align center
+		line-height 70px
+		span
+			color darkBlue
+			letter-spacing 4px
+		i
+			font-size 16px
+			padding 0 5px
+
+@media screen and (min-width: 1440px)
+	body
+		background-color red
+
+@keyframes blink
+	0%
+		opacity: 0;
+	100%
+		opacity: 1;
+
+// animation   animation slide-top 0.8s ease-out both
+
+// Mobile: 375px && Desktop: 1440px
