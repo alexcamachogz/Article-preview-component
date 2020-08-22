@@ -12,7 +12,7 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 95vh;
   justify-content: center;
   width: 100vw;
 }
@@ -135,6 +135,18 @@ main {
 .content-footer .social-media i {
   font-size: 16px;
   padding: 0 5px;
+}
+.attribution {
+  width: 100%;
+  text-align: center;
+  color: #48556a;
+}
+.attribution a {
+  text-decoration: none;
+  color: #6d7f97;
+}
+.attribution a:hover {
+  text-decoration: underline;
 }
 @media screen and (min-width: 800px) {
   .card {
