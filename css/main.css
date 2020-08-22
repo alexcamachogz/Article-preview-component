@@ -17,10 +17,12 @@ main {
   width: 100vw;
 }
 .card {
-  position: absolute;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 23px 2px #d9e6f2;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   width: 90vw;
 }
 .card .card-image {
@@ -134,9 +136,70 @@ main {
   font-size: 16px;
   padding: 0 5px;
 }
-@media screen and (min-width: 1440px) {
-  body {
-    background-color: #f00;
+@media screen and (min-width: 800px) {
+  .card {
+    flex-direction: row;
+    width: 670px;
+    height: 270px;
+  }
+  .card .card-image {
+    background-position: left;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    width: 265px;
+  }
+  .card .card-content {
+    margin: 0 auto;
+  }
+  .card .card-content .card-title {
+    margin-top: 30px;
+    width: 290px;
+  }
+  .card .card-content .card-text {
+    margin-top: 15px;
+    width: 290px;
+  }
+  .card .card-footer {
+    margin-top: 20px;
+    width: 290px;
+  }
+  .card .card-footer .card-footer-info {
+    letter-spacing: 0.4px;
+  }
+  .card .card-footer .card-footer-info p {
+    padding-left: 5px;
+  }
+  .card .card-footer .card-footer-info p:first-child {
+    padding-top: 5px;
+    padding-bottom: 7px;
+  }
+  .card-footer-share--dark {
+    display: none;
+  }
+  .content-footer {
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+    height: 50px;
+    width: 230px;
+    position: relative;
+    bottom: -30px;
+    left: 248px;
+  }
+  .content-footer::before {
+    border-top: 15px solid #48556a;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 49px;
+    left: 100px;
+  }
+  .content-footer .social-media {
+    line-height: 50px;
   }
 }
 @keyframes blink {

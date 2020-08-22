@@ -22,10 +22,12 @@ main
 	width 100vw
 
 .card
-	position absolute
 	background-color #FFF
 	border-radius 10px
 	box-shadow 0px 0px 23px 2px lightGrayishBlue
+	display flex
+	flex-direction column
+	position absolute
 	width 90vw
 	.card-image
 		background url('../images/drawers.jpg') center no-repeat
@@ -126,16 +128,65 @@ main
 			font-size 16px
 			padding 0 5px
 
-@media screen and (min-width: 1440px)
-	body
-		background-color red
+@media screen and (min-width: 800px)
+	.card
+		flex-direction row
+		width 670px
+		height 270px
+		.card-image
+			background-position left
+			border-top-right-radius 0
+			border-bottom-left-radius 10px
+			height 100%
+			width 265px
+		.card-content
+			margin 0 auto
+			.card-title
+				margin-top 30px
+				width 290px
+			.card-text
+				margin-top 15px
+				width 290px
+		.card-footer
+			margin-top 20px
+			width 290px
+			.card-footer-info
+				letter-spacing 0.4px
+				p
+					padding-left 5px
+				p:first-child
+					padding-top 5px
+					padding-bottom 7px
+	
+	.card-footer-share--dark
+		display none
 
+	.content-footer
+		border-radius 10px
+		grid-template-columns 1fr
+		height 50px
+		width 230px
+		position relative
+		bottom -30px
+		left 248px
+		&::before
+			border-top 15px solid darkGrayishBlue
+			border-bottom 15px solid transparent
+			border-left 15px solid transparent
+			border-right 15px solid transparent
+			// border-right 25px solid darkGrayishBlue
+			content ''
+			display block
+			position absolute
+			width 0
+			top 49px
+			left 100px
+		.social-media
+			line-height 50px
+
+// Mobile: 375px && Desktop: 1440px
 @keyframes blink
 	0%
 		opacity: 0;
 	100%
 		opacity: 1;
-
-// animation   animation slide-top 0.8s ease-out both
-
-// Mobile: 375px && Desktop: 1440px
