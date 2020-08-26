@@ -28,7 +28,7 @@ main
 	display flex
 	flex-direction column
 	position absolute
-	width 90vw
+	width 340px
 	.card-image
 		background url('../images/drawers.jpg') center no-repeat
 		background-size cover
@@ -43,19 +43,19 @@ main
 		.card-title
 			// border 1px solid red
 			color darkGrayishBlue
-			font-size 15px
+			font-size 16px
 			font-weight 700
-			letter-spacing 0.4px
-			line-height 20px
+			letter-spacing 0.32px
+			line-height 25px
 			margin-top 40px
 			width 260px
 		.card-text
 			// border 1px solid blue
 			color grayishBlue
-			font-weight 200
-			letter-spacing 0.4px
-			line-height 20px
-			margin-top 20px
+			font-weight 300
+			letter-spacing 0.29px
+			line-height 21px
+			margin-top 15px
 			width 260px
 	.card-footer
 		display grid
@@ -83,25 +83,28 @@ main
 .card-footer-share
 	padding-top 8px
 	cursor pointer
-	.card-footer-share--ligth
+	.card-footer-share--light
 		background-color #edf2f8
 		border-radius 50%
 		color darkGrayishBlue
-		height 28px
+		height 30px
 		line-height 30px
-		margin 0 auto
+		margin-left auto
+		margin-right auto
+		margin-top 0
+		margin-bottom 0
 		text-align center
-		width 28px
+		width 30px
 	.card-footer-share--dark
 		background-color darkBlue
 		border-radius 50%
 		color #edf2f8
-		height 28px
+		height 30px
 		line-height 30px
 		margin 0 auto
 		margin-top 8px
 		text-align center
-		width 28px
+		width 30px
 
 .content-footer
 	background-color darkGrayishBlue
@@ -111,9 +114,9 @@ main
 	display none
 	grid-template-columns 2fr 1fr
 	height 70px
-	width 90vw
+	width 340px
 	position relative
-	bottom -221px
+	bottom -229px
 	// transform: translateY(-70px);
 	animation 0.5s blink ease
 	&&.active
@@ -127,6 +130,9 @@ main
 		i
 			font-size 16px
 			padding 0 5px
+	.card-footer-share--dark
+		position relative
+		left -4px
 
 .attribution
 	width 100%
@@ -138,7 +144,7 @@ main
 		&:hover
 			text-decoration underline
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 900px)
 	.card
 		flex-direction row
 		width 670px
@@ -153,23 +159,29 @@ main
 			margin 0 auto
 			.card-title
 				margin-top 30px
-				width 290px
+				width 350px
+				font-size 18px
 			.card-text
 				margin-top 15px
-				width 290px
+				width 350px
 		.card-footer
+			padding-bottom 0
 			margin-top 20px
-			width 290px
+			width 350px
+			grid-template-columns 1fr 4fr 1fr
 			.card-footer-info
 				letter-spacing 0.4px
 				p
 					padding-left 5px
 				p:first-child
-					padding-top 5px
-					padding-bottom 7px
-	
-	.card-footer-share--dark
-		display none
+					padding-top 3px
+					padding-bottom 0
+			.card-footer-share
+					display flex
+					justify-content end
+				.card-footer-share--light
+					margin-left 0
+					margin-right 0
 
 	.content-footer
 		border-radius 10px
@@ -178,7 +190,7 @@ main
 		width 230px
 		position relative
 		bottom -30px
-		left 248px
+		left 292px
 		&::before
 			border-top 15px solid darkGrayishBlue
 			border-bottom 15px solid transparent
@@ -193,6 +205,15 @@ main
 			left 100px
 		.social-media
 			line-height 50px
+	
+	
+	.content-footer
+		.card-footer-share--dark
+			left 0px
+			top 5px
+
+.index-button
+	z-index 99
 
 // Mobile: 375px && Desktop: 1440px
 @keyframes blink

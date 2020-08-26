@@ -23,7 +23,7 @@ main {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 90vw;
+  width: 340px;
 }
 .card .card-image {
   background: url("../images/drawers.jpg") center no-repeat;
@@ -40,19 +40,19 @@ main {
 }
 .card .card-content .card-title {
   color: #48556a;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.4px;
-  line-height: 20px;
+  letter-spacing: 0.32px;
+  line-height: 25px;
   margin-top: 40px;
   width: 260px;
 }
 .card .card-content .card-text {
   color: #8a939c;
-  font-weight: 200;
-  letter-spacing: 0.4px;
-  line-height: 20px;
-  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 0.29px;
+  line-height: 21px;
+  margin-top: 15px;
   width: 260px;
 }
 .card .card-footer {
@@ -87,26 +87,29 @@ main {
   padding-top: 8px;
   cursor: pointer;
 }
-.card-footer-share .card-footer-share--ligth {
+.card-footer-share .card-footer-share--light {
   background-color: #edf2f8;
   border-radius: 50%;
   color: #48556a;
-  height: 28px;
+  height: 30px;
   line-height: 30px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
-  width: 28px;
+  width: 30px;
 }
 .card-footer-share .card-footer-share--dark {
   background-color: #6d7f97;
   border-radius: 50%;
   color: #edf2f8;
-  height: 28px;
+  height: 30px;
   line-height: 30px;
   margin: 0 auto;
   margin-top: 8px;
   text-align: center;
-  width: 28px;
+  width: 30px;
 }
 .content-footer {
   background-color: #48556a;
@@ -116,9 +119,9 @@ main {
   display: none;
   grid-template-columns: 2fr 1fr;
   height: 70px;
-  width: 90vw;
+  width: 340px;
   position: relative;
-  bottom: -221px;
+  bottom: -229px;
   animation: 0.5s blink ease;
 }
 .content-footer.content-footer.active {
@@ -136,6 +139,10 @@ main {
   font-size: 16px;
   padding: 0 5px;
 }
+.content-footer .card-footer-share--dark {
+  position: relative;
+  left: -4px;
+}
 .attribution {
   width: 100%;
   text-align: center;
@@ -148,7 +155,7 @@ main {
 .attribution a:hover {
   text-decoration: underline;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .card {
     flex-direction: row;
     width: 670px;
@@ -166,15 +173,18 @@ main {
   }
   .card .card-content .card-title {
     margin-top: 30px;
-    width: 290px;
+    width: 350px;
+    font-size: 18px;
   }
   .card .card-content .card-text {
     margin-top: 15px;
-    width: 290px;
+    width: 350px;
   }
   .card .card-footer {
+    padding-bottom: 0;
     margin-top: 20px;
-    width: 290px;
+    width: 350px;
+    grid-template-columns: 1fr 4fr 1fr;
   }
   .card .card-footer .card-footer-info {
     letter-spacing: 0.4px;
@@ -183,11 +193,16 @@ main {
     padding-left: 5px;
   }
   .card .card-footer .card-footer-info p:first-child {
-    padding-top: 5px;
-    padding-bottom: 7px;
+    padding-top: 3px;
+    padding-bottom: 0;
   }
-  .card-footer-share--dark {
-    display: none;
+  .card .card-footer .card-footer-share {
+    display: flex;
+    justify-content: end;
+  }
+  .card .card-footer .card-footer-share--light {
+    margin-left: 0;
+    margin-right: 0;
   }
   .content-footer {
     border-radius: 10px;
@@ -196,7 +211,7 @@ main {
     width: 230px;
     position: relative;
     bottom: -30px;
-    left: 248px;
+    left: 292px;
   }
   .content-footer::before {
     border-top: 15px solid #48556a;
@@ -213,6 +228,13 @@ main {
   .content-footer .social-media {
     line-height: 50px;
   }
+  .content-footer .card-footer-share--dark {
+    left: 0px;
+    top: 5px;
+  }
+}
+.index-button {
+  z-index: 99;
 }
 @keyframes blink {
   0% {
