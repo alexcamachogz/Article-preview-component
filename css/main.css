@@ -229,8 +229,7 @@ main {
     line-height: 50px;
   }
   .content-footer .card-footer-share--dark {
-    left: 0px;
-    top: 5px;
+    display: none;
   }
 }
 .index-button {
